@@ -13,7 +13,6 @@ def get_neighbours(x_coord: int, y_coord: int, step_size: int = 1) -> dict:
 
 def local_max(x_coord: int, y_coord: int, fieldfunction) -> tuple:
     iterations: int = 100
-    odor: float = 0.0
     for _ in range(iterations):
         neighbours = get_neighbours(x_coord,y_coord)
         (new_x, new_y) = max(neighbours.items(), key=operator.itemgetter(1))[0]
